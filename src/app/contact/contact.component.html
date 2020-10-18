@@ -1,0 +1,12 @@
+
+<h2>My Contact Information</h2>
+
+<ul>
+    <li *ngFor="let inf of info">
+        <h3>{{inf.name | uppercase}} details</h3>
+        <h5>  NAME:         {{inf.name}}</h5>
+        <h5>  EMAIL-ID:     {{inf.email}}</h5>
+        <h5>  ROLL-NUMBER:  {{inf.rollnumber}}</h5>
+    </li>
+</ul>
+

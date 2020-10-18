@@ -1,0 +1,58 @@
+
+<form [formGroup]="profileForm" >
+    <br>
+    <label>
+      Name: 
+      <input type="text" formControlName="Name" >
+    </label>
+    <br>
+    <br>
+    <label>
+      Email: 
+      <input type="text" formControlName="Email">
+    </label>
+    <br>
+    <br>
+    <label>
+        Feedback: 
+    </label>
+    <br>
+      <div>
+        <input id="great" type="radio" value="Great" name="Feedback" formControlName="Feedback">
+        <label for="great">Great</label>
+      </div>
+      <div>
+        <input id="okay" type="radio" value="Okay" name="Feedback" formControlName="Feedback">
+        <label for="okay">Okay</label>
+      </div>
+      <div>
+        <input id="notgood" type="radio" value="Not good" name="Feedback" formControlName="Feedback">
+        <label for="notgood">Not good</label>
+      </div>
+    <br>
+    <label>
+        Comments: 
+        <input type="text" formControlName="Comment">
+    </label>
+    <br>
+    <br>
+    <button type="submit" [disabled]="!profileForm.valid" (click)="onSubmit()">Submit</button>
+  </form>
+
+  <p class="para">
+    Submission Status: {{submitstatus}}
+  </p>
+
+  <p>
+    Form Value: {{ profileForm.value | json }}
+  </p>
+
+  <p>
+    Form Status: {{ profileForm.status }}
+  </p>
+<!--
+  <p>
+    <button (click)="updateProfile()">Update Profile</button>
+  </p>
+-->
+
